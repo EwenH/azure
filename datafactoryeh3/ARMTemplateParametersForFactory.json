@@ -1,0 +1,87 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactoryeh3"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3a_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabaseForGit_password": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedService_password": {
+			"value": ""
+		},
+		"AzureSqlDatabasev4_password": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_password": {
+			"value": ""
+		},
+		"linkedDataLakeEh_connectionString": {
+			"value": ""
+		},
+		"linkedService1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storageeh.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://storageeh.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3a_properties_typeProperties_url": {
+			"value": "https://storageacgen3eh.dfs.core.windows.net/"
+		},
+		"AzureKeyVault4Git_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaulteh.vault.azure.net/"
+		},
+		"AzureSqlDatabaseForGit_properties_typeProperties_server": {
+			"value": "dbservereh.database.windows.net"
+		},
+		"AzureSqlDatabaseForGit_properties_typeProperties_database": {
+			"value": "dbsqlehwed"
+		},
+		"AzureSqlDatabaseForGit_properties_typeProperties_userName": {
+			"value": "admineh"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
+			"value": "dbservereh3.database.windows.net"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
+			"value": "dbeh3"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
+			"value": "admineh"
+		},
+		"AzureSqlDatabasev4_properties_typeProperties_server": {
+			"value": "dbservereh3.database.windows.net"
+		},
+		"AzureSqlDatabasev4_properties_typeProperties_database": {
+			"value": "dbeh3"
+		},
+		"AzureSqlDatabasev4_properties_typeProperties_userName": {
+			"value": "admineh"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_server": {
+			"value": "synapseworkspacev3a.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_database": {
+			"value": "sqldedicatedpooleh3"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_userName": {
+			"value": "admineh"
+		},
+		"linkedService1_properties_typeProperties_url": {
+			"value": "https://storageacgen3eh.dfs.core.windows.net/"
+		}
+	}
+}

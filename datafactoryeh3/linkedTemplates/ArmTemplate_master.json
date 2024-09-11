@@ -1,0 +1,244 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "datafactoryeh3"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage3'"
+		},
+		"AzureDataLakeStorage3a_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage3a'"
+		},
+		"AzureSqlDatabaseForGit_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseForGit'"
+		},
+		"AzureSqlDatabaseLinkedService_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseLinkedService'"
+		},
+		"AzureSqlDatabasev4_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabasev4'"
+		},
+		"AzureSynapseAnalytics1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSynapseAnalytics1'"
+		},
+		"linkedDataLakeEh_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedDataLakeEh'"
+		},
+		"linkedService1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'linkedService1'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageeh.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageeh.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3a_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageacgen3eh.dfs.core.windows.net/"
+		},
+		"AzureKeyVault4Git_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://keyvaulteh.vault.azure.net/"
+		},
+		"AzureSqlDatabaseForGit_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "dbservereh.database.windows.net"
+		},
+		"AzureSqlDatabaseForGit_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbsqlehwed"
+		},
+		"AzureSqlDatabaseForGit_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admineh"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "dbservereh3.database.windows.net"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbeh3"
+		},
+		"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admineh"
+		},
+		"AzureSqlDatabasev4_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "dbservereh3.database.windows.net"
+		},
+		"AzureSqlDatabasev4_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbeh3"
+		},
+		"AzureSqlDatabasev4_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admineh"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "synapseworkspacev3a.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqldedicatedpooleh3"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admineh"
+		},
+		"linkedService1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageacgen3eh.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "datafactoryeh3_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage3_accountKey')]"
+					},
+					"AzureDataLakeStorage3a_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage3a_accountKey')]"
+					},
+					"AzureSqlDatabaseForGit_password": {
+						"value": "[parameters('AzureSqlDatabaseForGit_password')]"
+					},
+					"AzureSqlDatabaseLinkedService_password": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_password')]"
+					},
+					"AzureSqlDatabasev4_password": {
+						"value": "[parameters('AzureSqlDatabasev4_password')]"
+					},
+					"AzureSynapseAnalytics1_password": {
+						"value": "[parameters('AzureSynapseAnalytics1_password')]"
+					},
+					"linkedDataLakeEh_connectionString": {
+						"value": "[parameters('linkedDataLakeEh_connectionString')]"
+					},
+					"linkedService1_accountKey": {
+						"value": "[parameters('linkedService1_accountKey')]"
+					},
+					"AzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage3_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage3a_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage3a_properties_typeProperties_url')]"
+					},
+					"AzureKeyVault4Git_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault4Git_properties_typeProperties_baseUrl')]"
+					},
+					"AzureSqlDatabaseForGit_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseForGit_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseForGit_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseForGit_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseForGit_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseForGit_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabaseLinkedService_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseLinkedService_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseLinkedService_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseLinkedService_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabasev4_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabasev4_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabasev4_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabasev4_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabasev4_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabasev4_properties_typeProperties_userName')]"
+					},
+					"AzureSynapseAnalytics1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSynapseAnalytics1_properties_typeProperties_server')]"
+					},
+					"AzureSynapseAnalytics1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSynapseAnalytics1_properties_typeProperties_database')]"
+					},
+					"AzureSynapseAnalytics1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSynapseAnalytics1_properties_typeProperties_userName')]"
+					},
+					"linkedService1_properties_typeProperties_url": {
+						"value": "[parameters('linkedService1_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "datafactoryeh3_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'datafactoryeh3_ArmTemplate_0')]"
+			]
+		}
+	]
+}
