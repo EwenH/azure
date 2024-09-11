@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryeh3",
+	"location": "eastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b66ef8c8-b762-449a-bca8-e3f109ef9bab",
+		"tenantId": "f72f7ae9-ceaf-4f8c-837b-f56f9e50235a"
+	}
+}

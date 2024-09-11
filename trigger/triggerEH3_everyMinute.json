@@ -1,0 +1,18 @@
+{
+	"name": "triggerEH3_everyMinute",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2024-09-10T01:24:00",
+				"endTime": "2024-09-11T01:24:00",
+				"timeZone": "AUS Eastern Standard Time"
+			}
+		}
+	}
+}
